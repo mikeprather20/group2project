@@ -14,11 +14,13 @@ class ParkingGarage():
         return
 
     def payForParking(self, currentTicket):
-        amount = input('Please pay your 1 dollar ticket fee.')
+        amount = input('Enter 1 to pay now: ')
         if amount == 1:
             self.currentTicket['Paid'] = True
-        else: amount == 0:
-            self.currentTicket['Unpaid'] = False
+            print('ticket has been paid, you have 15 minutes to leave')
+        else:
+            False
+    
                 
 
     def leaveGarage(self, tickets, parkingSpaces, currentTicket):
