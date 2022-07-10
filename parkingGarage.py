@@ -8,7 +8,6 @@ class ParkingGarage():
     def takeTicket(self, tickets, parkingSpaces):
         for i in range(len(self.tickets and self.parkingSpaces)):
             self.tickets[i] = self.tickets[i] - 1
-            print(self.tickets)
             if i == 0:
                 print('Sorry, the Parking Garage is full!')
         return
@@ -19,26 +18,29 @@ class ParkingGarage():
             self.currentTicket['Paid'] = True
             print('ticket has been paid, you have 15 minutes to leave')
         else:
-            False
-    
-                
+            False                
 
     def leaveGarage(self, tickets, parkingSpaces, currentTicket):
-        for i in range(len(self.tickets and self.parkingSpaces)):
-            self.parkingSpaces[i] = self.parkingSpaces[i] + 1
-
-            if self.currentTicket == True:
-                print('Thank you, have a nice day!')
-            else:
-                self.currentTicket == False
-                amount = input('Please pay your 1 dollar ticket fee.')
+        amount = input('Enter 1 to pay now: ')
+        while True:
+            for i in range(len(self.tickets and self.parkingSpaces)):
+                self.parkingSpaces[i] = self.parkingSpaces[i] + 1
+                if self.currentTicket == True:
+                    print('Thank you, have a nice day!')
+                else:
+                    self.currentTicket == False
+                    print(amount)
+            return
 
 
 def main():
     car = ParkingGarage
-
-    while True:
-        pass
-
+    print('Welcome to the Parking Garage!\n')
+    print('Please take a ticket.')
+    printedTicket = input('Enter T to take ticket: ')
+    if printedTicket.upper() == "T":
+        car.takeTicket()
+    else:
+        print('Error')
 
 main()
