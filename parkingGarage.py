@@ -20,7 +20,6 @@ class ParkingGarage():
     def leaveGarage(self, tickets, parkingSpaces, currentTicket):
         pass
 
-
 def main():
     car = ParkingGarage
 

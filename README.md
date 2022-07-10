@@ -41,4 +41,8 @@ When the project is completed, commit the final changes, sync all pull requests,
 
 
 ###### List group responsiblities below:
+start: Michael-Drive,Brandon-Nav.
+swap every 30 min (zoom time out).
 ###### Provide name and approxamite line numbers where each person wrote their code
+Michael: Lines 1-17
+Brandon: Lines 18-
