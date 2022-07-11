@@ -5,14 +5,14 @@ class ParkingGarage():
         self.parkingSpaces = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         self.currentTicket = {}
 
-    def takeTicket(self, tickets, parkingSpaces):
+    def takeTicket(self):
         for i in range(len(self.tickets and self.parkingSpaces)):
             self.tickets[i] = self.tickets[i] - 1
             if i == 0:
                 print('Sorry, the Parking Garage is full!')
         return
 
-    def payForParking(self, currentTicket):
+    def payForParking(self):
         amount = input('Enter 1 to pay now: ')
         if amount == 1:
             self.currentTicket['Paid'] = True
@@ -20,7 +20,7 @@ class ParkingGarage():
         else:
             False                
 
-    def leaveGarage(self, tickets, parkingSpaces, currentTicket):
+    def leaveGarage(self):
         amount = input('Enter 1 to pay now: ')
         while True:
             for i in range(len(self.tickets and self.parkingSpaces)):
@@ -39,7 +39,7 @@ def main():
     print('Please take a ticket.')
     printedTicket = input('Enter T to take ticket: ')
     if printedTicket.upper() == "T":
-        car.takeTicket()
+        car.takeTicket(car, tickets = -1, parkingSpaces = -1)
     else:
         print('Error')
 
